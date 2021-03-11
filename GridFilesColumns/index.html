@@ -30,10 +30,10 @@
         }
         .container {            
             display: grid;
-            height: 900px;
-            width: 800px;
+            height: 300px;
+            width: 400px;
             border: 1px solid blue;                      
-            grid-template: repeat(3, 250px) / repeat(1, 1fr);            
+            grid-template: repeat(3, 1fr) / repeat(1, 1fr);            
             justify-content: space-evenly;
             align-content: space-between;
             row-gap: 5px;            
@@ -45,10 +45,35 @@
         }
         .container div {
             background-color: red;
-            border: 1px solid black;            
-            /* width: 100px;
-            height: 100px; */
+            border: 1px solid black;                     
             
+        }
+
+        .container2 {            
+            display: grid;
+            height: 300px;
+            width: 400px;
+            border: 1px solid blue;
+            grid-template-areas: 
+            "card1 card2"
+            "card3 card3";
+        }
+
+        .card1 {
+            grid-area: card1;
+            background-color: yellow;
+        }
+        .card2 {
+            grid-area: card2;
+            background-color: tomato;
+        }
+        .card3 {
+            grid-area: card3;
+            background-color: red;
+        }
+        .card4 {
+            grid-area: card3;
+            background-color: red;
         }
     </style>
 </head>
@@ -57,6 +82,13 @@
         <div>1</div>
         <div>2</div>
         <div>3</div>      
+    </div>
+
+    <div class="container2">
+        <div class="card1"></div>
+        <div class="card2"></div>
+        <div class="card3"></div>
+        <div class="card4"></div>
     </div>
 </body>
 </html>
